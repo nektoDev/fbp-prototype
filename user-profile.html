@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Яйценюх Елена | Личный кабинет | Find Beauty Pro</title>
+
+    <link rel="icon" href="../../favicon.ico">
+    <link href="lib/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+
+    <style>
+
+        .new-service {
+            text-align: center;
+            font-size: 440%;
+            color: #EC008C;
+        }
+
+        .new-service:hover {
+            text-align: center;
+            font-size: 440%;
+            color: white;
+            background-color: #EC008C;
+        }
+
+        .panel-info {
+            border-color: #EC008C;
+        }
+
+        .panel-info>.panel-heading {
+            color: white;
+            background-color: #EC008C;
+            border-color: #EC008C;
+        }
+
+        .navbar-nav > li > a > .profile-image {
+            margin-bottom: -10px !important;
+            margin-top: -10px !important;
+        }
+
+        .dropdown-menu > li > a:hover {
+            background-color: #EC008C !important;
+            color: #fff !important;
+        }
+
+        .container-profile {
+            /*padding-top: 100px;*/
+            margin-top: -110px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        /* USER PROFILE PAGE */
+        .card {
+            margin-top: 20px;
+            padding: 30px;
+            background-color: rgba(214, 224, 226, 0.2);
+            -webkit-border-top-left-radius: 5px;
+            -moz-border-top-left-radius: 5px;
+            border-top-left-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-top-right-radius: 5px;
+            border-top-right-radius: 5px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .card.hovercard {
+            position: relative;
+            padding-top: 100px;
+            overflow: hidden;
+            text-align: center;
+            background-color: #fff;
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        .card.hovercard .card-background {
+            height: 130px;
+        }
+
+        .card-background img {
+            -webkit-filter: blur(25px);
+            -moz-filter: blur(25px);
+            -o-filter: blur(25px);
+            -ms-filter: blur(25px);
+            filter: blur(25px);
+            margin-left: -100px;
+            margin-top: -200px;
+            min-width: 130%;
+        }
+
+        .card.hovercard .useravatar {
+            position: absolute;
+            top: 115px;
+            left: 0;
+            right: 0;
+        }
+
+        .card.hovercard .useravatar img {
+            width: 100px;
+            height: 100px;
+            max-width: 100px;
+            max-height: 100px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .card.hovercard .card-info {
+            position: absolute;
+            bottom: 14px;
+            left: 0;
+            right: 0;
+        }
+
+        .card.hovercard .card-info .card-title {
+            padding: 0 5px;
+            font-size: 20px;
+            line-height: 1;
+            color: #262626;
+            background-color: rgba(255, 255, 255, 0.1);
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
+
+        .card.hovercard .card-info {
+            overflow: hidden;
+            font-size: 12px;
+            line-height: 20px;
+            color: #737373;
+            text-overflow: ellipsis;
+        }
+
+        .card.hovercard .bottom {
+            padding: 0 20px;
+            margin-bottom: 17px;
+        }
+
+        .btn-pref .btn {
+            -webkit-border-radius: 0 !important;
+        }
+
+        .container-profile > .btn-pref .active, .nav > .active a {
+            background-color: #EC008C !important;
+            color: white !important;
+        }
+
+        .container-profile > .btn-pref .btn, .nav a {
+            color: #EC008C;
+        }
+
+        .btn-primary {
+            background-color: #EC008C !important;
+            border: #c6006a;
+        }
+
+        table.calendar {
+            margin-bottom: 0;
+        }
+
+        table.calendar > thead > tr > th {
+            text-align: center;
+        }
+
+        table.calendar > tbody > tr > td {
+            height: 20px;
+        }
+
+        table.calendar > tbody > tr > td > div {
+        / / padding: 8 px;
+            height: 40px;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: middle;
+            float: left;
+        }
+
+        table.calendar > tbody > tr > td.has-events {
+            color: white;
+            cursor: pointer;
+            padding: 0;
+            border-radius: 4px;
+        }
+
+        table.calendar > tbody > tr > td.has-events > div {
+            background-color: #EC008C;
+            border-left: 1px solid white;
+        }
+
+        table.calendar > tbody > tr > td.has-events > div:first-child {
+            border-left: 0;
+            margin-left: 1px;
+        }
+
+        table.calendar > tbody > tr > td.has-events > div.practice {
+            opacity: 0.7;
+        }
+
+        table.calendar > tbody > tr > td.conflicts > div > span.title {
+        / / color: red;
+        }
+
+        table.calendar > tbody > tr > td.max-conflicts > div {
+            background-color: red;
+            color: white;
+        }
+
+        table.calendar > tbody > tr > td.has-events > div > span {
+            display: block;
+            text-align: center;
+        }
+
+        table.calendar > tbody > tr > td.has-events > div > span a {
+            color: white;
+        }
+
+        table.calendar > tbody > tr > td.has-events > div > span.title {
+            font-weight: bold;
+        }
+
+        table.table-borderless > thead > tr > th, table.table-borderless > tbody > tr > td {
+            border: 0;
+        }
+
+        .table tbody tr.hover td, .table tbody tr.hover th {
+            background-color: whiteSmoke;
+        }
+
+        .timeline {
+            list-style: none;
+            padding: 20px 0 20px;
+            position: relative;
+        }
+
+        .timeline:before {
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            content: " ";
+            width: 3px;
+            background-color: #eeeeee;
+            left: 25px;
+            margin-right: -1.5px;
+        }
+
+        .timeline > li {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .timeline > li:before,
+        .timeline > li:after {
+            content: " ";
+            display: table;
+        }
+
+        .timeline > li:after {
+            clear: both;
+        }
+
+        .timeline > li:before,
+        .timeline > li:after {
+            content: " ";
+            display: table;
+        }
+
+        .timeline > li:after {
+            clear: both;
+        }
+
+        .timeline > li > .timeline-panel {
+            width: calc(100% - 75px);
+            float: right;
+            border: 1px solid #d4d4d4;
+            border-radius: 2px;
+            padding: 20px;
+            position: relative;
+            -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+        }
+
+        .timeline > li > .timeline-panel:before {
+            position: absolute;
+            top: 26px;
+            left: -15px;
+            display: inline-block;
+            border-top: 15px solid transparent;
+            border-right: 15px solid #ccc;
+            border-left: 0 solid #ccc;
+            border-bottom: 15px solid transparent;
+            content: " ";
+        }
+
+        .timeline > li > .timeline-panel:after {
+            position: absolute;
+            top: 27px;
+            left: -14px;
+            display: inline-block;
+            border-top: 14px solid transparent;
+            border-right: 14px solid #fff;
+            border-left: 0 solid #fff;
+            border-bottom: 14px solid transparent;
+            content: " ";
+        }
+
+        .timeline > li > .timeline-badge {
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 1.4em;
+            text-align: center;
+            position: absolute;
+            top: 16px;
+            left: 0px;
+            margin-right: -25px;
+            background-color: #999999;
+            z-index: 100;
+            border-top-right-radius: 50%;
+            border-top-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+        }
+
+        .timeline > li.timeline-inverted > .timeline-panel {
+            float: left;
+        }
+
+        .timeline > li.timeline-inverted > .timeline-panel:before {
+            border-right-width: 0;
+            border-left-width: 15px;
+            right: -15px;
+            left: auto;
+        }
+
+        .timeline > li.timeline-inverted > .timeline-panel:after {
+            border-right-width: 0;
+            border-left-width: 14px;
+            right: -14px;
+            left: auto;
+        }
+
+        .timeline-badge.primary {
+            background-color: #2e6da4 !important;
+        }
+
+        .timeline-badge.success {
+            background-color: #3f903f !important;
+        }
+
+        .timeline-badge.warning {
+            background-color: #f0ad4e !important;
+        }
+
+        .timeline-badge.danger {
+            background-color: #d9534f !important;
+        }
+
+        .timeline-badge.info {
+            background-color: #5bc0de !important;
+        }
+
+        .timeline-title {
+            margin-top: 0;
+            color: inherit;
+        }
+
+        .timeline-body > p,
+        .timeline-body > ul {
+            margin-bottom: 0;
+        }
+
+        .timeline-body > p + p {
+            margin-top: 5px;
+        }
+
+        .timeline-body {
+
+        }
+
+        /* post */
+        .post-wrap {
+            padding: 15px !important;
+            border-radius: 2px !important;
+            border: none !important;
+        }
+
+        .post-wrap + .post-wrap {
+            margin-top: 40px;
+            border-top: solid 1px #EEEEEE;
+            padding-top: 40px;
+        }
+
+        .post-masonry .post-wrap + .post-wrap {
+            margin-top: 0;
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .post-masonry .post-wrap {
+            margin-bottom: 40px;
+        }
+
+        .post-header {
+            margin-bottom: 15px;
+        }
+
+        .post-author {
+            font-size: 18px;
+        }
+
+        .post-author,
+        .post-author a {
+            color: #999999;
+            font-size: 13px;
+        }
+
+        .post-author a:hover {
+            color: #25a35a;
+        }
+
+        .post-meta {
+            padding: 10px 0 0 0;
+            font-size: 14px;
+            line-height: 14px;
+            color: #717d87;
+        }
+
+        .post-meta a {
+            color: #717d87
+        }
+
+        .post-meta a:hover {
+            color: #25a35a;
+        }
+
+        .post-meta .sep:before {
+            content: "/";
+            margin: 0 5px;
+        }
+
+        .post-date {
+            margin-right: 10px;
+        }
+
+        .post-media {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .post-media .thumbnail {
+            margin-bottom: 0;
+        }
+
+        .post-media .media-link {
+            padding: 15px 10px;
+            background-color: #25a35a;
+            color: #ffffff;
+            font-size: 30px;
+            font-weight: 300;
+            border-radius: 2px;
+        }
+
+        .post-body {
+        }
+
+        .post-excerpt {
+            margin-bottom: 20px;
+        }
+
+        .post-details {
+        }
+
+        .post-title {
+            margin-top: 0;
+            margin-bottom: 0;
+            text-transform: none;
+        }
+
+        .post-title,
+        .post-title a {
+            color: #1f2122;
+        }
+
+        .post-title a:hover {
+            color: #25a35a;
+        }
+
+        .post-footer {
+            margin-top: 20px;
+        }
+
+        .post-tags {
+            display: block;
+            font-size: 11px;
+            line-height: 20px;
+        }
+
+        .post-categories {
+            display: block;
+            font-size: 11px;
+            line-height: 20px;
+        }
+
+        .about-the-author {
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: solid 1px #EEEEEE;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar-wrapper">
+    <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="./index.html">
+                        <img alt="Brand" src="img/logo.png" width="20" height="20">
+                    </a>
+
+                    <a class="navbar-brand" href="./index.html">
+                        Find Beauty Pro
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                        <li class=""><a href="./index.html">Главная</a></li>
+                        <li><a href="#masters">Мастера</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                        <li><a href="./index.html#about">О нас</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">
+                                <img src="img/bitch.jpg" width="30" height="30" class="profile-image img-circle">
+                                Яйценюх Елена
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./user-profile.html">Личный кабинет</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Выход</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="container-profile col-lg-12 col-sm-12">
+            <div class="card hovercard">
+                <div class="card-background">
+                    <img class="card-bkimg" alt="" src="http://lorempixel.com/1200/575/people/9/">
+                    <!-- http://lorempixel.com/850/280/people/9/ -->
+                </div>
+                <div class="useravatar">
+                    <img alt="" src="img/bitch.jpg">
+                </div>
+                <div class="card-info"><span class="card-title">Яйценюх Елена</span>
+
+                </div>
+            </div>
+            <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
+                <div class="btn-group" role="group">
+                    <button type="button" id="clients-tab" class="btn btn-default active" href="#tab1"
+                            data-toggle="tab">
+                        <div class="hidden-xs">Мои клиенты</div>
+                    </button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" id="history-tab" class="btn btn-default" href="#tab2" data-toggle="tab">
+                        <div class="hidden-xs">История</div>
+                    </button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" id="messages-tab" class="btn btn-default" href="#tab3" data-toggle="tab">
+                        <div class="hidden-xs">Сообщения</div>
+                    </button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" id="settings-tab" class="btn btn-default" href="#tab4" data-toggle="tab">
+                        <div class="hidden-xs">Настройки</div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="well">
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="tab1">
+                        <h3>Мои клиенты</h3>
+
+                        <table class="calendar table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th width="14%">Понедельник</th>
+                                <th width="14%">Вторник</th>
+                                <th width="14%">Среда</th>
+                                <th width="14%">Четверг</th>
+                                <th width="14%">Пятница</th>
+                                <th width="14%">Суббота</th>
+                                <th width="14%">Воскресенье</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>08:00</td>
+
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                            </tr>
+                            <tr>
+                                <td>08:30</td>
+
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                            </tr>
+                            <tr>
+                                <td>09:00</td>
+
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                            </tr>
+                            <tr>
+                                <td>09:30</td>
+
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                            </tr>
+                            <tr>
+                                <td>10:00</td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" has-events" rowspan="4">
+
+                                    <div class="row-fluid booked" style="width: 99%; height: 100%;">
+
+
+                                        <span class="title">Наталья</span> <span class="bookedr"><a>нюхнуть подмышку</a></span>
+                                    </div>
+                                </td>
+
+                                <td class=" has-events" rowspan="4">
+
+                                    <div class="row-fluid booked" style="width: 99%; height: 100%;">
+
+
+                                        <span class="title">Елена</span> <span class="bookedr"><a>Френч
+                                    </a></span>
+                                    </div>
+                                </td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" has-events" rowspan="4">
+
+                                    <div class="row-fluid booked" style="width: 99%; height: 100%;">
+
+
+                                        <span class="title">ТП</span> <span class="bookedr"><a>Звякнуть
+                                        бубенцом</a></span>
+                                    </div>
+                                </td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                            </tr>
+                            <tr>
+                                <td>10:30</td>
+
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                            </tr>
+                            <tr>
+                                <td>11:00</td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                            </tr>
+                            <tr>
+                                <td>11:30</td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+
+                            </tr>
+                            <tr>
+                                <td>12:00</td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+                            </tr>
+                            <tr>
+                                <td>12:30</td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+                            </tr>
+                            <tr>
+                                <td>13:00</td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+                            </tr>
+                            <tr>
+                                <td>13:30</td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+                            </tr>
+                            <tr>
+                                <td>14:00</td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+                            </tr>
+                            <tr>
+                                <td>14:30</td>
+
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+                            </tr>
+                            <tr>
+                                <td>15:00</td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+                            </tr>
+                            <tr>
+                                <td>15:30</td>
+
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                            </tr>
+                            <tr>
+                                <td>16:00</td>
+
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                            </tr>
+                            <tr>
+                                <td>16:30</td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                            </tr>
+                            <tr>
+                                <td>17:00</td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                            </tr>
+                            <tr>
+                                <td>17:30</td>
+
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                            </tr>
+                            <tr>
+                                <td>18:00</td>
+
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+                                <td class=" no-events" rowspan="1"></td>
+
+
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade in" id="tab2">
+                        <h3>История</h3>
+                        <ul class="timeline">
+
+                            <li>
+                                <div class="timeline-badge danger"><i class="glyphicon glyphicon-thumbs-down"></i></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title"><a href="#">Пн, 26 ноя</a> 8:00-9:00 <a href="#">Курица
+                                            Перепелкина</a> Французский маникюр</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Негативный отзыв. Наблевала на руки, воняла рыбой сделал только 3 пальца и
+                                            сломала мне нос!</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-badge success"><i class="glyphicon  glyphicon-thumbs-up"></i></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title"><a href="#">Пн, 26 ноя</a> 9:00-10:00 <a href="#">Овца
+                                            Лошкова</a> Стрижка мохнатки</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Положительный отзыв. Наблевала на руки, воняла рыбой сделал только 3 пальца и
+                                            сломала мне нос!</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-badge"><i class="glyphicon glyphicon-comment"></i></div>
+
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4 class="timeline-title"><a href="#">Пн, 26 ноя</a> 10:00-19:00 <a href="#">Мкртчян
+                                            Кавказа</a> Выщипывание сосков</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Клиент еще не оставил отзыв</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade in" id="tab3">
+                        <h3>Сообщения</h3>
+
+                        <div class="row">
+                            <script>
+
+                            </script>
+                            <div class="conversation-wrap col-lg-3">
+                                <div class="media conversation unread"
+                                     style="padding: 7px 2px; background-color: #EC008C; color: white; height: 64px;"
+                                     id="menu_1">
+                                    <a class="pull-left" href="#">
+                                        <img class="media-object" data-src="holder.js/64x64" alt="64x64"
+                                             style="width: 50px; height: 50px;"
+                                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC">
+                                    </a>
+
+                                    <div class="media-body ">
+                                        <h5 class="media-heading">Людмила Лишноговорева</h5>
+                                        <small>Хочу секса!</small>
+                                    </div>
+                                </div>
+                                <div class="media conversation" id="menu_2">
+                                    <a class="pull-left" href="#">
+                                        <img class="media-object" data-src="holder.js/64x64" alt="64x64"
+                                             style="width: 50px; height: 50px;"
+                                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC">
+                                    </a>
+
+                                    <div class="media-body">
+                                        <h5 class="media-heading">Сеньора Галенкрова</h5>
+                                        <small>Соси мой левый локоток!</small>
+                                    </div>
+                                </div>
+                                <div class="media conversation">
+                                    <a class="pull-left" href="#">
+                                        <img class="media-object" data-src="holder.js/64x64" alt="64x64"
+                                             style="width: 50px; height: 50px;"
+                                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC">
+                                    </a>
+
+                                    <div class="media-body">
+                                        <h5 class="media-heading">Пирожок Копытцева</h5>
+                                        <small>Я покакала</small>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="message-wrap col-lg-8" id="msg-wrap">
+                                <div class="msg-wrap " id="message_1">
+                                    <div class="media msg">
+                                        <a class="pull-left" href="#">
+                                            <img class="media-object" data-src="holder.js/64x64" alt="64x64"
+                                                 style="width: 32px; height: 32px;"
+                                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC">
+                                        </a>
+
+                                        <div class="media-body">
+                                            <small class="pull-right time"><i class="fa fa-clock-o"></i>Пн, 23 октября,
+                                                12:10
+                                            </small>
+                                            <h5 class="media-heading">Людмила Лишнеговорева</h5>
+                                            <small class="col-lg-10">Хочу секса!</small>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="media msg ">
+                                        <a class="pull-left" href="#">
+                                            <img class="media-object" data-src="holder.js/64x64" alt="64x64"
+                                                 style="width: 32px; height: 32px;"
+                                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC">
+                                        </a>
+
+                                        <div class="media-body">
+                                            <small class="pull-right time"><i class="fa fa-clock-o"></i>Пн, 23 октября,
+                                                12:12
+                                            </small>
+                                            <h5 class="media-heading">Вы</h5>
+                                            <small class="col-lg-10">Приезжай!</small>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="msg-wrap" id="message_2">
+                                    <div class="media msg">
+                                        <a class="pull-left" href="#">
+                                            <img class="media-object" data-src="holder.js/64x64" alt="64x64"
+                                                 style="width: 32px; height: 32px;"
+                                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC">
+                                        </a>
+
+                                        <div class="media-body">
+                                            <small class="pull-right time"><i class="fa fa-clock-o"></i> 12:10am</small>
+                                            <h5 class="media-heading">User 2</h5>
+                                            <small class="col-lg-10">Message2"</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="send-wrap ">
+
+                                    <textarea class="form-control send-message" rows="3"
+                                              placeholder="Написать ответ..."></textarea>
+
+
+                                </div>
+                                <div class="btn-panel">
+                                    <a href="" class=" col-lg-3 btn   send-message-btn " role="button"><i
+                                            class="fa fa-cloud-upload"></i> Прикрепить файл</a>
+                                    <a href="" class=" col-lg-4 text-right btn   send-message-btn pull-right"
+                                       role="button"><i class="fa fa-plus"></i> Написать</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade in" id="tab4">
+                        <h3>Настройки</h3>
+
+                        <div class="row">
+
+                            <div class="col-md-2">
+                                <ul class="nav nav-tabs nav-stacked" role="tablist">
+                                    <li role="presentation" class="active"><a href="#home" aria-controls="home"
+                                                                              role="tab" data-toggle="tab">Основное</a>
+                                    </li>
+                                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab"
+                                                               data-toggle="tab">Услуги</a></li>
+                                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab"
+                                                               data-toggle="tab">Настройки</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Tab panes -->
+                            <div class="col-md-10">
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="home">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="toppad col-md-9">
+                                                    <div class="panel panel-info">
+                                                        <div class="panel-heading">
+                                                            <h3 class="panel-title">Елена Яйценюх</h3>
+                                                        </div>
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-md-3 col-lg-3 " align="center"><img
+                                                                        alt="User Pic" src="./img/bitch.jpg"
+                                                                        class="img-circle img-responsive">
+                                                                    <br/>
+                                                                    <a href="#"
+                                                                       class="btn btn-default">Изменить</a>
+                                                                </div>
+
+
+                                                                <div class=" col-md-9 col-lg-9 ">
+                                                                    <table class="table table-user-information">
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td>Специализация:</td>
+                                                                            <td>Маникюр</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Опыт:</td>
+                                                                            <td>102 года</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Возраст</td>
+                                                                            <td>120 лет</td>
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                        <tr>
+                                                                            <td>Пол</td>
+                                                                            <td>Мужской</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Адрес</td>
+                                                                            <td>улица 7-я Гвардейская 6, кв 114,
+                                                                                Сходня,
+                                                                                Москва,
+                                                                                Россия
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Электропочта</td>
+                                                                            <td><a href="mailto:loh@eto.sudba">loh@eto.sudba</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <td>Телефон</td>
+                                                                        <td>123-4567-890
+                                                                        </td>
+
+                                                                        </tr>
+
+                                                                        </tbody>
+                                                                    </table>
+
+                                                                    <a href="#"
+                                                                       class="btn btn-primary">Редактировать</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="profile">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <ul class="list-group" id="contact-list">
+                                                    <li class="list-group-item col-md-6">
+                                                        <div class="col-xs-12 col-sm-3">
+                                                            <img src="./img/nose.jpg" class="img-responsive" />
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-9">
+                                                            <span class="name lead">Ковыряние в носу</span><br/>
+                                                            <span class="price"><strong><span class="glyphicon glyphicon-ruble" aria-hidden="true"></span> 1000 руб.</strong></span><br/>
+                                                            <span class="description"><small>Поковыряю красивым маникюрным пальчиком в вашей жопе</small></span><br/>
+                                                            <span class="duration"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 30 мин.</span><br/>
+
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </li>
+
+                                                    <li class="list-group-item col-md-6">
+                                                        <div class="col-xs-12 col-sm-3">
+                                                            <img src="./img/drink.jpeg" class="img-responsive" />
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-9">
+                                                            <span class="name lead">Бухаю с вами</span><br/>
+                                                            <span class="price"><strong><span class="glyphicon glyphicon-ruble" aria-hidden="true"></span> 10000 руб.</strong></span><br/>
+                                                            <span class="description"><small>Бухну за компанию за ваши деньги и ваши напитки. Пропью печень к черту!</small></span><br/>
+                                                            <span class="duration"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 9 часов 30 мин.</span><br/>
+
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </li>
+                                                    <li class="list-group-item col-md-6 new-service">
+                                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                                        <div class="clearfix"></div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="messages">
+                                        <form class="form-horizontal">
+                                            <div class="form-group">
+                                                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                                                <div class="col-sm-10">
+                                                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="vk" class="col-sm-2 control-label">Вконтакте</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="vk" placeholder="страница ВКонтакте">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="insta" class="col-sm-2 control-label">Instagram</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="insta" placeholder="страница Instagram">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="col-sm-offset-2 col-sm-10">
+                                                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="lib/holder.min.js"></script>
+<script src="lib/ie10-viewport-bug-workaround.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

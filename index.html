@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <link href="lib/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <style>
+        .navbar-nav > li > a > .profile-image {
+            margin-bottom: -10px !important;
+            margin-top: -10px !important;
+        }
+
+        .dropdown-menu > li > a:hover {
+            background-color: #EC008C !important;
+            color: #fff !important;
+        }
+
+        .btn-primary {
+            background-color: #EC008C !important;
+            border: #c6006a;
+        }
+
+        blockquote {
+            display: block;
+            background: #fff;
+            padding: 15px 20px 15px 45px;
+            margin: 0 0 20px;
+            position: relative;
+
+            /*Font*/
+            font-family: Georgia, serif;
+            font-size: 16px;
+            line-height: 1.2;
+            color: #666;
+            text-align: justify;
+
+            /*Borders - (Optional)*/
+            border-left: 15px solid #c76c0c;
+            border-right: 2px solid #c76c0c;
+
+            /*Box Shadow - (Optional)*/
+            -moz-box-shadow: 2px 2px 15px #ccc;
+            -webkit-box-shadow: 2px 2px 15px #ccc;
+            box-shadow: 2px 2px 15px #ccc;
+        }
+
+        blockquote::before {
+            content: "\201C"; /*Unicode for Left Double Quote*/
+
+            /*Font*/
+            font-family: Georgia, serif;
+            font-size: 60px;
+            font-weight: bold;
+            color: #999;
+
+            /*Positioning*/
+            position: absolute;
+            left: 10px;
+            top: 5px;
+        }
+
+        blockquote::after {
+            /*Reset to make sure*/
+            content: "";
+        }
+
+        blockquote a {
+            text-decoration: none;
+            background: #eee;
+            cursor: pointer;
+            padding: 0 3px;
+            color: #c76c0c;
+        }
+
+        blockquote a:hover {
+            color: #666;
+        }
+
+        blockquote em {
+            font-style: italic;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="navbar-wrapper">
+    <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="./index.html">
+                        <img alt="Brand" src="img/logo.png" width="20" height="20">
+                    </a>
+
+                    <a class="navbar-brand" href="./index.html">
+                        Find Beauty Pro
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Главная</a></li>
+                        <li><a href="#masters">Мастера</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                        <li><a href="#about">О нас</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">
+                                <img src="img/bitch.jpg" width="30" height="30" class="profile-image img-circle">
+                                Яйценюх Елена
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./user-profile.html">Личный кабинет</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Выход</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+</div>
+
+
+<!-- Carousel
+================================================== -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img class="first-slide pull-right"
+                 src="img/carousel1.png"
+                 alt="First slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Find Beauty Pro Ultimate Version 8 ServicePack 3 Revision#12332 Patch 17</h1>
+
+                    <p>Мы супер круты и с нами вы сможете найти дизайнеров ваших ресниц и остальной хрени за пару секунд
+                        и записаться в 3 клика!</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Зарегистрироваться прямо сейчас</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img class="second-slide"
+                 src="img/carousel1.png"
+                 alt="Second slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Для клиентов</h1>
+
+                    <p>Чем круты и что предлагаем клиентам в 2 слова</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Узнать больше</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img class="third-slide"
+                 src="img/carousel1.png"
+                 alt="Third slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Для мастеров</h1>
+
+                    <p>Чем круты и что предлагаем для мастеров</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">пред.</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">след.</span>
+    </a>
+</div><!-- /.carousel -->
+
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing">
+    <h1 class="text-center">Наши лучшие специалисты <br/>
+        <small>Тут хуйня какая-нибудь навроде "по отзывам клиентов"</small>
+    </h1>
+    <!-- Three columns of text below the carousel -->
+    <div class="row well">
+        <div class="col-lg-4">
+            <img class="img"
+                 src="img/bitch.jpg"
+                 alt="Generic placeholder image" width="140" height="140">
+
+            <h2>Анна Фелисова</h2>
+            <i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i><i
+                class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star-empty'></i><i
+                class='glyphicon glyphicon-star-empty'></i>
+
+            <blockquote>
+                <p>Охуенно и дешево</p>
+                <footer>
+                    Тупая пизда в <cite title="Twitter">Twitter</cite>
+                </footer>
+            </blockquote>
+            <p><a class="btn btn-primary" href="#" role="button">Подробнее &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="img"
+                 src="img/bitch.jpg"
+                 alt="Generic placeholder image" width="140" height="140">
+
+            <h2>Анна Фелисова</h2>
+            <i class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i><i
+                class='glyphicon glyphicon-star'></i><i class='glyphicon glyphicon-star'></i><i
+                class='glyphicon glyphicon-star-empty'></i>
+
+            <blockquote>
+                <p>Охуенно и дешево</p>
+                <footer>
+                    Тупая пизда в <cite title="Twitter">Twitter</cite>
+                </footer>
+            </blockquote>
+            <p><a class="btn btn-primary" href="#" role="button">Подробнее &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img class="img"
+                 src="img/bitch.jpg"
+                 alt="Generic placeholder image" width="140" height="140">
+
+            <h2>Анна Фелисова</h2>
+            <i class='glyphicon glyphicon-thumbs-up'>6</i>
+            <i class='glyphicon glyphicon-thumbs-down pull-right'>21034</i>
+
+            <blockquote>
+                <p>Охуенно и дешево</p>
+                <footer>
+                    Тупая пизда в <cite title="Twitter">Twitter</cite>
+                </footer>
+            </blockquote>
+            <p><a class="btn btn-primary" href="#" role="button">Подробнее &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider" id="about">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Первая плюшка <span
+                    class="text-muted">Вы не поверите как мы охуенны</span></h2>
+
+            <p class="lead">Просто пиздато можно найти всяких пидарасов и тупопездочек. Мы охуенны, идите к нам!</p>
+
+            <p>Просто пиздато можно найти всяких пидарасов и тупопездочек. Мы охуенны, идите к нам!
+                Просто пиздато можно найти всяких пидарасов и тупопездочек. Мы охуенны, идите к нам!
+                Просто пиздато можно найти всяких пидарасов и тупопездочек. Мы охуенны, идите к нам!</p>
+
+            <p><a class="btn btn-primary" href="#" role="button">Зарегистрироваться &raquo;</a></p>
+
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto"
+                 alt="Generic placeholder image">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+            <h2 class="featurette-heading">О да, это так пиздато пользоваться нами. <span class="text-muted">Сами попробуйте.</span>
+            </h2>
+
+            <p class="lead">Вы почуствуете как мы нежно входи в вашу жопу и поселяемся в вашем мозге навсегда. О да, мы
+                охуенны.</p>
+
+            <p><a class="btn btn-primary" href="#" role="button">Найти мастеров &raquo;</a></p>
+
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto"
+                 alt="Generic placeholder image">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">И наконец: <span class="text-muted"> Мы охуенны.</span></h2>
+
+            <p class="lead">А тут я заебался печатать всякую хуйню, поэтому оставляю так</p>
+
+            <p><a class="btn btn-primary" href="#" role="button">Подробнее для мастеров &raquo;</a></p>
+
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto"
+                 alt="Generic placeholder image">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+
+        <p>&copy; 2015 Хуй-пизда-Джигурда, Инкопрорейтейд. &middot;</p>
+    </footer>
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="lib/holder.min.js"></script>
+<script src="lib/ie10-viewport-bug-workaround.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
